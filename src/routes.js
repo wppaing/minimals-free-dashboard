@@ -8,8 +8,9 @@ import DashboardAppPage from "./pages/DashboardAppPage";
 export default function Router() {
   const routes = useRoutes([
     {
-      element: <Outlet />,
-      children: [{ element: <Navigate to="/dashboard" />, index: true }],
+      path: "/",
+      element: <DashboardLayout />,
+      // children: [{ element: <Navigate to="/dashboard" />, index: true }],
     },
   ]);
 
