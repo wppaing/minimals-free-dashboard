@@ -1,12 +1,11 @@
 import { AppBar, IconButton, styled, Toolbar } from "@mui/material";
-import Iconify from "src/components/iconify";
+import Iconify from "components/iconify";
 import SearchBar from "./SearchBar";
+import { HEADER_MOBILE, NAV_WIDTH } from "utils/constants";
 
-const NAV_WIDTH = 280;
-const HEADER_MOBILE = 64;
-const HEADER_DESKTOP = 92;
-
-const StyledRoot = styled(AppBar)(({ theme }) => ({}));
+const StyledRoot = styled(AppBar)({
+  width: `calc(100% - ${NAV_WIDTH}px)`,
+});
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   minHeight: HEADER_MOBILE,

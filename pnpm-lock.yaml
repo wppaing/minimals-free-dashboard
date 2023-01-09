@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@emotion/react': ^11.10.5
   '@emotion/styled': ^11.10.5
+  '@iconify/react': ^4.0.1
   '@mui/material': ^5.11.3
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.4.0
@@ -16,6 +17,7 @@ specifiers:
 dependencies:
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
+  '@iconify/react': 4.0.1_react@18.2.0
   '@mui/material': 5.11.3_5rzy53przelm5jchjmb5vr6dxy
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -1744,6 +1746,19 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: false
+
+  /@iconify/react/4.0.1_react@18.2.0:
+    resolution: {integrity: sha512-/DBJqh5K7W4f+d4kpvyJa/OTpVa3GfgrE9bZFAKP0vIWDr0cvVU9MVvbbkek216w9nLQhpJY/FeJtc6izB1PHw==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@iconify/types': 2.0.0
+      react: 18.2.0
+    dev: false
+
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: false
 
   /@istanbuljs/load-nyc-config/1.1.0:
