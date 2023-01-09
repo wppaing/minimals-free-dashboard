@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { styled } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import Header from "./header";
@@ -10,11 +11,13 @@ const StyledRoot = styled("div")({
 const Main = styled("main")({});
 
 export default function DashboardLayout() {
+  const [open, setOpen] = useState(false);
+
   return (
     <StyledRoot>
-      <Header />
+      <Header open={open} setOpen={setOpen} />
 
-      <Nav />
+      <Nav open={open} />
 
       <Main>
         <Outlet />

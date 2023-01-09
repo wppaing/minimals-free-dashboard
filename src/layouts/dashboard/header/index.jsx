@@ -1,19 +1,34 @@
-import { AppBar, styled } from "@mui/material";
+import { AppBar, IconButton, styled, Toolbar } from "@mui/material";
+import Iconify from "src/components/iconify";
 import SearchBar from "./SearchBar";
 
-const StyledRoot = styled(AppBar)({
-  position: "fixed",
-  top: 0,
-  right: 0,
-  width: "100%",
-});
+const NAV_WIDTH = 280;
+const HEADER_MOBILE = 64;
+const HEADER_DESKTOP = 92;
 
-export default function Header() {
+const StyledRoot = styled(AppBar)(({ theme }) => ({}));
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  minHeight: HEADER_MOBILE,
+}));
+
+export default function Header({ onOpenNav }) {
   return (
     <StyledRoot>
-      <h1>This is header</h1>
+      <StyledToolbar>
+        <IconButton
+          onClick={onOpenNav}
+          sx={{
+            mr: 1,
+            color: "text.primary",
+            display: { lg: "none" },
+          }}
+        >
+          <Iconify icon="eva:menu-2-fill" />
+        </IconButton>
 
-      <SearchBar />
+        <SearchBar />
+      </StyledToolbar>
     </StyledRoot>
   );
 }

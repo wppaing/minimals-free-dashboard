@@ -1,15 +1,22 @@
-import { ClickAwayListener } from "@mui/material";
+import { ClickAwayListener, IconButton } from "@mui/material";
+
+import { useState } from "react";
+import Iconify from "src/components/iconify";
 
 export default function SearchBar() {
-  const handleClickAway = () => {
-    console.log("clicked away listener");
-  };
+  const [open, setOpen] = useState(false);
 
-  return <div>This is search bar.</div>;
+  const handleOpen = () => setOpen(true);
 
-  // return (
-  //   <ClickAwayListener onClickAway={handleClickAway}>
-  //     This is search bar
-  //   </ClickAwayListener>
-  // );
+  const handleClose = () => setOpen(false);
+
+  return (
+    <ClickAwayListener onClickAway={handleClose}>
+      {!open && (
+        <IconButton onClick={handleOpen}>
+          <Iconify icon="eva:search-fill" />
+        </IconButton>
+      )}
+    </ClickAwayListener>
+  );
 }
